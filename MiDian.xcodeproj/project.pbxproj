@@ -14,6 +14,9 @@
 		C792F8F01A5E5A3900F335B6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C792F8EF1A5E5A3900F335B6 /* Images.xcassets */; };
 		C792F8F31A5E5A3900F335B6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C792F8F11A5E5A3900F335B6 /* LaunchScreen.xib */; };
 		C792F8FF1A5E5A3900F335B6 /* MiDianTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C792F8FE1A5E5A3900F335B6 /* MiDianTests.m */; };
+		C792F90F1A5E5EAD00F335B6 /* DPAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C792F90B1A5E5EAD00F335B6 /* DPAPI.m */; };
+		C792F9101A5E5EAD00F335B6 /* DPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C792F90E1A5E5EAD00F335B6 /* DPRequest.m */; };
+		C792F9131A5E6F6200F335B6 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C792F9121A5E6F6200F335B6 /* HttpTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,14 @@
 		C792F8F81A5E5A3900F335B6 /* MiDianTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiDianTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C792F8FD1A5E5A3900F335B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C792F8FE1A5E5A3900F335B6 /* MiDianTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiDianTests.m; sourceTree = "<group>"; };
+		C792F90A1A5E5EAD00F335B6 /* DPAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPAPI.h; sourceTree = "<group>"; };
+		C792F90B1A5E5EAD00F335B6 /* DPAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPAPI.m; sourceTree = "<group>"; };
+		C792F90C1A5E5EAD00F335B6 /* DPConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPConstants.h; sourceTree = "<group>"; };
+		C792F90D1A5E5EAD00F335B6 /* DPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPRequest.h; sourceTree = "<group>"; };
+		C792F90E1A5E5EAD00F335B6 /* DPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPRequest.m; sourceTree = "<group>"; };
+		C792F9111A5E6F6200F335B6 /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
+		C792F9121A5E6F6200F335B6 /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
+		C792F9141A5E7A6300F335B6 /* SingletonTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingletonTemplate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +92,7 @@
 		C792F8E11A5E5A3900F335B6 /* MiDian */ = {
 			isa = PBXGroup;
 			children = (
+				C792F9081A5E5E9100F335B6 /* Lib */,
 				C792F8E61A5E5A3900F335B6 /* AppDelegate.h */,
 				C792F8E71A5E5A3900F335B6 /* AppDelegate.m */,
 				C792F8E91A5E5A3900F335B6 /* ViewController.h */,
@@ -89,6 +101,8 @@
 				C792F8EF1A5E5A3900F335B6 /* Images.xcassets */,
 				C792F8F11A5E5A3900F335B6 /* LaunchScreen.xib */,
 				C792F8E21A5E5A3900F335B6 /* Supporting Files */,
+				C792F9111A5E6F6200F335B6 /* HttpTool.h */,
+				C792F9121A5E6F6200F335B6 /* HttpTool.m */,
 			);
 			path = MiDian;
 			sourceTree = "<group>";
@@ -117,6 +131,27 @@
 				C792F8FD1A5E5A3900F335B6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C792F9081A5E5E9100F335B6 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				C792F9091A5E5EAD00F335B6 /* dianpingapi */,
+				C792F9141A5E7A6300F335B6 /* SingletonTemplate.h */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		C792F9091A5E5EAD00F335B6 /* dianpingapi */ = {
+			isa = PBXGroup;
+			children = (
+				C792F90A1A5E5EAD00F335B6 /* DPAPI.h */,
+				C792F90B1A5E5EAD00F335B6 /* DPAPI.m */,
+				C792F90C1A5E5EAD00F335B6 /* DPConstants.h */,
+				C792F90D1A5E5EAD00F335B6 /* DPRequest.h */,
+				C792F90E1A5E5EAD00F335B6 /* DPRequest.m */,
+			);
+			path = dianpingapi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +254,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C792F9101A5E5EAD00F335B6 /* DPRequest.m in Sources */,
+				C792F90F1A5E5EAD00F335B6 /* DPAPI.m in Sources */,
 				C792F8EB1A5E5A3900F335B6 /* ViewController.m in Sources */,
 				C792F8E81A5E5A3900F335B6 /* AppDelegate.m in Sources */,
 				C792F8E51A5E5A3900F335B6 /* main.m in Sources */,
+				C792F9131A5E6F6200F335B6 /* HttpTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
